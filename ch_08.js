@@ -45,6 +45,7 @@ hyunju2.major="정융"
 hyunju2
 
 // 객체 순회 >> 키/밸류 뽑는법..인가보다. 파이썬 딕셔너리랑 비슷하네
+// 웹브라우저에서는 배열에 객체를 넣어놓고 보통 쓴다~
 const a = Object.keys(hyunju2);
 a
 const b= Object.values(hyunju2);
