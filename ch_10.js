@@ -46,9 +46,12 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 // })
 
-fetch('https://jsonplaceholder.typicode.com/todos/1')
-  .then(response => response.json())
-  .then(json => console.log(json))
-  .catch((e) => {
-    console.error(e)
-  });
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then((response) => response.json())
+  .then((json) => console.log(json))
+  .catch((e) => {console.error(e)});
+
+/* 링크에서 데이터를 가져오고, 결과값이 response에 있음
+그 response를 json형태로(우리가 읽을 수 있는 형태로) parsing (.json() 메소드 이용)
+
+*/
