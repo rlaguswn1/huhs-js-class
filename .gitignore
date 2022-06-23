@@ -1,4 +1,4 @@
 # node 설치 관련
 node_modules/
 package.json
-package.json
+package-lock.json
