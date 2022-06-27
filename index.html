@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        h4 {
+            text-align: center;
+            background-color:  beige;
+            border: 1px solid black;
+        }
+
+        p{
+            color: blue;
+        }
+    </style>
 </head>
     <body>
         <div id="root"></div>
@@ -11,10 +22,18 @@
             fetch('https://jsonplaceholder.typicode.com/posts')
                 .then((response) => response.json())
                 .then((json) => {
-                    for (const item of json) {
-                        let a = `<div><h4>${item.title}</h4><p>${item.body}</p></div>`
-                        document.getElementById("root").appendChild(a);
+                    const arr = [];   
+                    for (const item of json) {  
+                        arr.push(`
+                        <div>
+                        <p>${item.id}</p>
+                        <h4>${item.title}</h4>
+                        <p>${item.body}</p>
+                        </div>                        
+                        `);
                     }
+                    document.getElementById('root').innerHTML = arr.join('');
+                    // join: 원소들을 이어서 보여줘라.괄호 안은 구분자
                 })
                 .catch((e) => {console.error(e)});
         </script>

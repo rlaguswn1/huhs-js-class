@@ -37,6 +37,7 @@ npm: 자바스크립트 라이브러리. 다른 사람들이 만든걸 쉽게 �
 
 */
 
+//nodejs에 import하는 방법
 const fetch = require('node-fetch');
 //인증서 문제로, 아래 코드 추가하여 해결함
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
